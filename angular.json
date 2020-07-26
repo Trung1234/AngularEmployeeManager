@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularEmployeeManager"
+    }
+  },
+  "defaultProject": "AngularEmployeeManager",
+  "cli": {
+    "analytics": "21704fd1-7570-4360-a4ec-efb713a472f0"
+  }
 }
