@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../models/employee';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-employee-edit',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeEditComponent implements OnInit {
 
-  constructor() { }
+  model: Employee  ={} as Employee;
+  list : Employee[] =[];
+
+  constructor( private dataServ:DataService) { }
 
   ngOnInit(): void {
+  }
+
+  getItem() {
+    this.dataServ.getSharedItem().subscribe(item =>
+      (this.model = item)
+    );
+  }
+
+  onSubmit() {
+    let cloneObject = JSON.parse(JSON.stringify(this.model));
+    this.list.push(cloneObject);
+    this.dataServ.sendSharedListItem(this.list);
   }
 
 }
