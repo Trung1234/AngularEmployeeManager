@@ -1,7 +1,7 @@
 <div class="card m-3">
   <h5 class="card-header">Detail Employee Form </h5>
   <div class="card-body">
-      <form name="form" (ngSubmit)="f.form.valid && onSubmitEdit()" #f="ngForm"  novalidate>
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"  novalidate>
           <div class="form-row">
               <div class="form-group col-6">
                   <label>First Name</label>
@@ -73,7 +73,7 @@
               <div *ngIf="f.submitted && acceptTerms.invalid" class="invalid-feedback">Accept Ts & Cs is required</div>
           </div>
           <div class="text-center">
-              <button class="btn btn-primary mr-1" [routerLink] = "'/detail'">Edit Employee</button>
+              <button class="btn btn-primary mr-1">Edit Employee</button>
               <button class="btn btn-secondary" type="reset">Cancel</button>
           </div>
       </form>
