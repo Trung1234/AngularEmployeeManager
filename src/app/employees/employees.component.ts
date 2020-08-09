@@ -26,6 +26,8 @@ export class EmployeesComponent implements OnInit {
   }
 
   editEmployee(item: Employee) {
+    this.dataServ.sendSharedItem(item);
+    this.dataServ.sendSharedListItem(this.listEmployees);
   }
 
 }
