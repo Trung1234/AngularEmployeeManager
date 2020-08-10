@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmployeesComponent } from './employees/employees.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
     // Lazy loading modules
@@ -15,9 +16,9 @@ const routes: Routes = [
     redirectTo: "/login",
     pathMatch: 'full'
   },
-  { path: 'dashboash', component: DashboardComponent },
-  { path: 'employees', component: EmployeesComponent },
-  { path: 'detail', component: EmployeeDetailComponent }
+  { path: 'dashboash', component: DashboardComponent,canActivate: [AuthGuardService] },
+  { path: 'employees', component: EmployeesComponent,canActivate: [AuthGuardService] },
+  { path: 'detail', component: EmployeeDetailComponent,canActivate: [AuthGuardService] }
 ];
 
 @NgModule({
