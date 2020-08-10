@@ -7,6 +7,10 @@ import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -14,12 +18,15 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     EmployeesComponent,
     EmployeeEditComponent,
     DashboardComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

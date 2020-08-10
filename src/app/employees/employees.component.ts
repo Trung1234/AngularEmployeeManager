@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee';
 import { DataService } from '../data.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { EmployeeDetailComponent } from '../employee-detail/employee-detail.component';
 
 @Component({
   selector: 'app-employees',
@@ -11,7 +13,7 @@ export class EmployeesComponent implements OnInit {
 
   listEmployees: Employee[] = [];
 
-  constructor( private dataServ: DataService) { }
+  constructor( private dataServ: DataService,private modalService: NgbModal) { }
 
   ngOnInit(): void {
      this.dataServ.getSharedListItem().subscribe((list) =>
@@ -28,6 +30,7 @@ export class EmployeesComponent implements OnInit {
   editEmployee(item: Employee) {
     this.dataServ.sendSharedItem(item);
     this.dataServ.sendSharedListItem(this.listEmployees);
+    this.modalService.open(EmployeeDetailComponent);
   }
 
 }

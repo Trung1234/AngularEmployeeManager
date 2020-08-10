@@ -5,6 +5,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: "/dashboash",
+    pathMatch: 'full'
+  },
   { path: 'dashboash', component: DashboardComponent },
   { path: 'employees', component: EmployeesComponent },
   { path: 'detail', component: EmployeeDetailComponent }

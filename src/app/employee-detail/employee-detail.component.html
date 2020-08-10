@@ -73,8 +73,8 @@
               <div *ngIf="f.submitted && acceptTerms.invalid" class="invalid-feedback">Accept Ts & Cs is required</div>
           </div>
           <div class="text-center">
-              <button class="btn btn-primary mr-1">Edit Employee</button>
-              <button class="btn btn-secondary" type="reset">Cancel</button>
+              <button  [routerLink] = "'/employees'"  class="btn btn-primary mr-1">Edit Employee</button>
+              <button class="btn btn-secondary" type="reset" [routerLink] = "'/employees'" >Cancel</button>
           </div>
       </form>
   </div>
