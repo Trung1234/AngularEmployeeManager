@@ -5,9 +5,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 const routes: Routes = [
+    // Lazy loading modules
+    {
+      path: 'login',  loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+    },
+
   {
     path: '',
-    redirectTo: "/dashboash",
+    redirectTo: "/login",
     pathMatch: 'full'
   },
   { path: 'dashboash', component: DashboardComponent },
