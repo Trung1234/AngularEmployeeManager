@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmployeesComponent } from './employees/employees.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
-import { AuthGuardService } from './auth-guard.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
     // Lazy loading modules

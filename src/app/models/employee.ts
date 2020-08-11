@@ -1,4 +1,5 @@
 export class Employee{
+    id:number;
     depart:string;
     firstName: string;
     lastName: string;

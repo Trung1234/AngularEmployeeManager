@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee';
-import { DataService } from '../data.service';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { DataService } from '../services/data.service';
+import {NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeDetailComponent } from '../employee-detail/employee-detail.component';
 
 @Component({

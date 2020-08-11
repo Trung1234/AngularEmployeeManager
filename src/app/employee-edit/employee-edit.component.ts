@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee';
-import { DataService } from '../data.service';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-employee-edit',
@@ -24,6 +24,7 @@ export class EmployeeEditComponent implements OnInit {
   }
 
   onSubmit() {
+    this.model.id = this.list.length+1;
     let cloneObject = JSON.parse(JSON.stringify(this.model));
     this.list.push(cloneObject);
     this.dataServ.sendSharedListItem(this.list);
