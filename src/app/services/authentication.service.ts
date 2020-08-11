@@ -7,7 +7,7 @@ export class AuthenticationService  {
 
   constructor() { }
   login(username: string, password: string) {
-    if (username == "admin" && password == "admin") {
+    if (username === "admin" && password === "admin") {
       localStorage.setItem('currentUser', "loggedin");
       return true;
     }
