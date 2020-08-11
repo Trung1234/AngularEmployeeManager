@@ -18,6 +18,19 @@ export class EmployeesComponent implements OnInit {
   ngOnInit(): void {
      this.dataServ.getSharedListItem().subscribe((list) =>
      {
+       // sort by id
+       if(list != null){
+        list.sort((a, b) => {
+          if(a.id > b.id) {
+            return 1;
+          } else if(a.id < b.id) {
+            return -1;
+          } else {
+            return 0;
+          }
+        });
+       }
+
       this.listEmployees = list;
      } );
   }
