@@ -12,7 +12,8 @@ import { EmployeeDetailComponent } from '../employee-detail/employee-detail.comp
 export class EmployeesComponent implements OnInit {
 
   listEmployees: Employee[] = [];
-
+  searchKeyWord = '';
+  p: number = 1;
   constructor( private dataServ: DataService,private modalService: NgbModal) { }
 
   ngOnInit(): void {

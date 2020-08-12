@@ -10,11 +10,13 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { SearchPipe } from './custom-pipe/pipe.search';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
   declarations: [
+    SearchPipe,
     AppComponent,
     EmployeesComponent,
     EmployeeEditComponent,
@@ -25,6 +27,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     FormsModule,
     AppRoutingModule,
     NgbModule
