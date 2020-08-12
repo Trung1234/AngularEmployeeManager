@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   login(): void {
-    if (this.username != '' && this.password != '') {
+    if (this.username !== '' && this.password !== '') {
       if (this._auth.login(this.username, this.password)) {
         this._router.navigate(["dashboash"]);
       }

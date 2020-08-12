@@ -20,7 +20,7 @@ export class EmployeesComponent implements OnInit {
      this.dataServ.getSharedListItem().subscribe((list) =>
      {
        // sort by id
-       if(list != null){
+       if(list){
         list.sort((a, b) => {
           if(a.id > b.id) {
             return 1;
